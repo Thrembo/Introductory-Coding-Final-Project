@@ -1,0 +1,44 @@
+import time
+import CrctEq
+
+def FinalCalc():
+    
+    FQV = ['Voltage','voltage','V','v','Volts','volts']
+    FQC = ['Current','current','I','i','A','a','Cur','cur','c','C']
+    FQR = ['Resistence','resistence','Res','res','R','r','Ω']
+    FQP = ['Power','power','P','p','W','w']
+
+    try:
+        FirstQ = str(input('Would you like to solve for current, voltage, resistence, or power?\n'))
+    except:
+        print('Please type current, voltage, or resistence')
+        
+    if FirstQ in FQV:
+        
+        CrctEq.voltage()
+        print(" ")
+        time.sleep(1)
+        FinalCalc()
+
+    if FirstQ in FQC:
+
+        CrctEq.Current()
+        print(" ")
+        time.sleep(1)
+        FinalCalc()
+        
+    if FirstQ in FQR:
+        
+        CrctEq.Resistence()
+        print(" ")
+        time.sleep(1)
+        FinalCalc()
+
+    if FirstQ in FQP:
+
+        CrctEq.Power()
+        print(" ")
+        time.sleep(1)
+        FinalCalc()
+    
+FinalCalc()
