@@ -1,0 +1,369 @@
+#############################
+## CIRCUIT EQUATION MODULE ##
+##                         ##
+## INCLUDES:               ##
+##      VOLTAGE            ##
+##      CURRENT            ##
+##      RESISTENCE         ##
+##      POWER              ##
+#############################
+
+def voltage():        
+        try:
+            I = Current = float(input('Please input the total current of the circuit:\n'))
+        except:
+            print('Please input a number.\n')
+            time.sleep(1)
+            FinalCalc()
+
+        try: 
+            RQuestion = int(input('How many resistors will you be working with? (1-4)\n'))
+        except:
+            print('Please enter a number 1-4')
+            
+        if RQuestion == 1:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = 0
+                R3 = 0
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion == 2:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = 0
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion == 3:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = float(input('Please input the value for R3:\n'))
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if RQuestion == 4:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = float(input('Please input the value for R3:\n'))
+                R4 = float(input('Please input the value for R4:\n'))
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion > 4:
+            print('There is a maximum of 4 resistors\n')
+            FinalCalc()
+
+        if RQuestion < 1:
+            print('There is a minimum of 1 resistor\n')
+            FinalCalc()
+
+        R = R1 + R2 + R3 + R4
+        E = I*R
+        print('The total voltage is equal to',E,"V")
+
+        try:
+                Addp = str(input("Would you like the circuit's power aswell? (Yes/No)\n"))
+                if Addp == "Yes":
+                        P=I*V
+                        print("The power of the circuit is",P,"W")
+                if Addp == "No":
+                        print(' ')
+                        FinalCalc()
+        except:
+                print("Please type a valid input.")
+                FinalCalc()
+
+def Current():
+        try: 
+            VQuestion = int(input('How many voltage sources will you be working with? (1-4)\n'))
+        except:
+            print('Please enter a number 1-4')
+        if VQuestion == 1:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = 0
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if VQuestion == 2:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if VQuestion == 3:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+        if VQuestion == 4:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = float(input('Please input the value for V4:\n'))
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+        if VQuestion > 4:
+            print('There is a maximum of 4 voltage sources\n')
+            FinalCalc()
+
+        if VQuestion < 1:
+            print('There is a minimum of 1 voltage source \n')
+            FinalCalc()
+        try: 
+            RQuestion = int(input('How many resistors will you be working with? (1-4)\n'))
+        except:
+            print('Please enter a number 1-4')
+        
+        if RQuestion == 1:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = 0
+                R3 = 0
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion == 2:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = 0
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion == 3:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = float(input('Please input the value for R3:\n'))
+                R4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if RQuestion == 4:
+            try:
+                R1 = float(input('Please input the value for R1:\n'))
+                R2 = float(input('Please input the value for R2:\n'))
+                R3 = float(input('Please input the value for R3:\n'))
+                R4 = float(input('Please input the value for R4:\n'))
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if RQuestion > 4:
+            print('There is a maximum of 4 resistors\n')
+            FinalCalc()
+
+        if RQuestion < 1:
+            print('There is a minimum of 1 resistor\n')
+            FinalCalc()
+
+        R = R1+R2+R3+R4
+        V = V1+V2+V3+V4
+        I = V/R
+        
+        print('The total current is equal to',I,"A")
+        try:
+                Addp = str(input("Would you like the circuit's power aswell? (Yes/No)\n"))
+                if Addp == "Yes":
+                        P=I*V
+                        print("The power of the circuit is",P,"W")
+                if Addp == "No":
+                        print(' ')
+                        FinalCalc()
+        except:
+                print("Please type a valid input.")
+                FinalCalc()
+
+def Resistence():
+        
+        try:
+            I = Current = float(input('Please input the total current of the circuit:\n'))
+        except:
+            print('Please input a number.\n')
+            time.sleep(1)
+            FinalCalc()
+
+        try: 
+            VQuestion = int(input('How many voltage sources will you be working with? (1-4)\n'))
+        except:
+            print('Please enter a number 1-4')
+            
+        if VQuestion == 1:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = 0
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion == 2:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion == 3:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if VQuestion == 4:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = float(input('Please input the value for V4:\n'))
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion > 4:
+            print('There is a maximum of 4 voltage sources\n')
+            FinalCalc()
+
+        if VQuestion < 1:
+            print('There is a minimum of 1 voltage source\n')
+            FinalCalc()
+
+        V=V1+V2+V3+V4
+        R = V/I
+        print('The total resistence is',R,"Ω")
+        
+        try:
+                Addp = str(input("Would you like the circuit's power aswell? (Yes/No)\n"))
+                if Addp == "Yes":
+                        P=I*V
+                        print("The power of the circuit is",P,"W")
+                if Addp == "No":
+                        print(' ')
+                        FinalCalc()
+        except:
+                print("Please type a valid input.")
+                FinalCalc()
+
+def Power():
+        try:
+            I = Current = float(input('Please input the total current of the circuit:\n'))
+        except:
+            print('Please input a number.\n')
+            time.sleep(1)
+            FinalCalc()
+
+        try: 
+            VQuestion = int(input('How many voltage sources will you be working with? (1-4)\n'))
+        except:
+            print('Please enter a number 1-4')
+            
+        if VQuestion == 1:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = 0
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion == 2:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = 0
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion == 3:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = 0
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+
+        if VQuestion == 4:
+            try:
+                V1 = float(input('Please input the value for V1:\n'))
+                V2 = float(input('Please input the value for V2:\n'))
+                V3 = float(input('Please input the value for V3:\n'))
+                V4 = float(input('Please input the value for V4:\n'))
+            except:
+                print('Please input a number.\n')
+                time.sleep(1)
+                FinalCalc()
+                
+        if VQuestion > 4:
+            print('There is a maximum of 4 voltage sources\n')
+            FinalCalc()
+
+        if VQuestion < 1:
+            print('There is a minimum of 1 voltage source\n')
+            FinalCalc()
+
+        V=V1+V2+V3+V4
+        P=I*V
+        print('The total power is',P,"W")
